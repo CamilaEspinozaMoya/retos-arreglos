@@ -91,7 +91,8 @@ console.log(pair); // --> [4, 5]
 */
 
 function findPairForSum(array, number) {
-  for (var i = 0 ; i < array.length ; i++) {
+  for (var i = 0 ; i < array.length ; i++) 
+  {
     let par = array[i] 
     let sub = (array.slice(0, i)).concat(array.slice(i+1, array.length));
     
