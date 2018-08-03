@@ -107,3 +107,78 @@ function findPairForSum(array, number) {
 
 module.exports = findPairForSum;
 
+// Ejercicio 6
+/*
+Escriba una función llamada "filterOddElements".
+
+Dado un array de números,"filterOddElements" devuelve un array que contiene sólo los números impares del array dado.
+
+Ejemplo:
+
+var output = filterOddElements([1, 2, 3, 4, 5]);
+console.log(output); // --> [1, 3, 5]
+*/
+function filterOddElements(arr) {
+  let numImpar = [];
+  
+  for ( let num = 0; num < arr.length; num++ ) {
+    if ( arr[num] % 2 !== 0 ) {
+      numImpar.push(arr[num]);
+    }
+  }
+  return numImpar
+}
+
+module.exports = filterOddElements;
+
+// Ejercicio 7
+/*
+Escriba una función llamada "findShortestWordAmongMixedElements".
+
+Dado un array, "findShortestWordAmongMixedElements" devuelve la cadena más corta dentro del array dado.
+
+Notas:
+
+Si hay vínculos, debería devolver el primer elemento que aparezca en el array dado.
+Espere que el array tenga otros valores además de las cuerdas.
+Si el array dado está vacío, debería devolver una cadena vacía.
+Si el array dado no contiene cadenas, debería devolver una cadena vacía.
+Ejemplo:
+
+var output = findShortestWordAmongMixedElements([4, 'two', 2, 'three']);
+console.log(output); // --> 'two'
+*/
+
+function findShortestWordAmongMixedElements(arr) {
+  let stringVacio = '';
+  if(arr.length > 0){
+    arr.forEach( i => {
+      if(typeof i === 'string'){
+        if(stringVacio === ''){
+          stringVacio = i;
+        } else if (i.length < stringVacio.length){
+          stringVacio = i;
+        }
+      }
+    })
+  }
+  return stringVacio;
+}
+
+module.exports = findShortestWordAmongMixedElements;
+
+// Ejercicio 8
+/*
+Escriba una función llamada "findSmallestNumberAmongMixedElements".
+
+Dado un arreglo de elementos mixtos, "findSmallestNumberAmongMixedElements" devuelve el número más pequeño dentro del arreglo dado.
+
+Notas:
+
+Si el arreglo está vacío, debería devolver 0.
+Si el arreglo no contiene números, debería devolver 0.
+Ejemplo:
+
+var output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);
+console.log(output); // --> 4
+*/
