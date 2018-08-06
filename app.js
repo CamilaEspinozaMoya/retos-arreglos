@@ -149,6 +149,8 @@ var output = findShortestWordAmongMixedElements([4, 'two', 2, 'three']);
 console.log(output); // --> 'two'
 */
 
+
+
 function findShortestWordAmongMixedElements(arr) {
   let stringVacio = '';
   if(arr.length > 0){
@@ -182,3 +184,29 @@ Ejemplo:
 var output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);
 console.log(output); // --> 4
 */
+
+function findSmallestNumberAmongMixedElements(arr) {
+  // your code here
+}
+module.exports = findSmallestNumberAmongMixedElements;
+
+// Ejercicio 9
+/*
+Escriba una función llamada "getLongestWordOfMixedElements".
+
+Dado un arreglo de tipos mixtos, "getLongestWordOfMixedElements" devuelve la cadena más larga del arreglo dado.
+
+Notas:
+
+Si el arreglo está vacío, debería devolver una cadena vacía ("").
+Si el arreglo no contiene cadenas de texto, debería devolver una cadena vacía.
+Ejemplo:
+
+var output = getLongestWordOfMixedElements([3, 'word', 5, 'up', 3, 1]);
+console.log(output); // --> 'word'
+*/
+
+function getLongestWordOfMixedElements(arr) {
+  // your code here
+}
+module.exports = getLongestWordOfMixedElements;
